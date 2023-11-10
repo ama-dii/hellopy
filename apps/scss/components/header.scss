@@ -1,5 +1,9 @@
 @use '../util' as *;
 .header {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: rem(36);
+
     @include breakpoint(large){
         display: flex;
         justify-content: space-between;
@@ -7,7 +11,11 @@
     }
 
     &__title {
+        width: 100%;
 
+        @include breakpoint(medium){
+            width: auto;
+        }
     }
 
     &__subtitle{
@@ -17,6 +25,6 @@
     }
 
     &__toggle {
-
+        margin-left: auto;
     }
 }
