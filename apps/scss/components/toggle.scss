@@ -1,19 +1,34 @@
 @use '../util' as *;
 
  .toggle {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: rem(12);
     border: none;
 
     &__wrapper{
-
+        position: relative;
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        height: rem(24);
+        border-radius: rem(12);
+        overflow: hidden;
     }
 
     input[type="radio"]{
-
+        opacity: 0;
     }
 
     &__background{
-
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 100;
+        top: 0;
+        background: linear-gradient(325deg, var(--toggle-bg-end) 0%,
+        var(--toggle-bg-start) 98.02%);
     }
+
     &__button {
         width: rem(16);
         height: rem(16);
@@ -22,6 +37,17 @@
     }
 
     label{
-        
+     &__[for="dark"]  {
+        grid-column: 1 / 2;
+        justify-self: end;
+     }
+     &__[for="system"]  {
+        grid-column: 2 /3;
+        grid-row: 2 / 3;
+        justify-self: center;
+     }
+     &__[for="light"]  {
+        grid-column: 3 / 4;
+     } 
     }
  }
