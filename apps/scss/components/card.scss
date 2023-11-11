@@ -1,4 +1,83 @@
 @use '../util' as *;
+
 .cards {
+    background: var{--dark-card};
+    color: var{--dark--text1};
+    width: rem(255);
+    padding: rem(25);
+    text-align: center;
+    margin-bottom: rem(28);
+
+    &__icon {
+        margin-right: rem(8);
+
+        &--facebook {
+
+        }
+
+        &--twitter {
+            
+        }
+
+        &--Instagram {
+            
+        }
+
+        &--youtube {
+            
+        }
+
+        &__platform {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__username {
+        font-size: rem(12);
+        font-weight: 700;
+    }
+
+    &__followers {
+        margin-bottom: rem(25);
+    }
+
+    &__count {
+        color: var(--light-bg);
+        font-weight: 700;
+        letter-spacing: rem(-2);
+        line-height: 1;
+        margin-bottom: rem(8);
+
+        &--big {
+            font-size: rem(56);
+        }
+
+        &--small {
+
+        }
+    }
+
+    &__label {
+        font-size: rem(12);
+        letter-spacing: rem(5);
+        font-weight: rem(400);
+        color: var{--dark--text1};
+        text-transform: uppercase;
+        margin-top: rem(9);
+    }
+
+    &__chnage {
+
+        &--up {
+
+        }
+
+        &--down {
+
+        }
+    }
+
     padding: rem(20)
 }
