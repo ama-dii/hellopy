@@ -17,6 +17,8 @@
 }
 
 .card {
+    position: relative;
+    overflow: hidden;
     background: var{--dark-card};
     color: var{--dark--text1};
     width: rem(255);
@@ -33,6 +35,53 @@
         }
 
         &--twitter {
+            border-top: rem(5) solid var(--twitter);
+        }
+
+        &--Instagram {
+            padding-top: rem(30);
+            &::before {
+                content: '';
+                position: relative;
+                display: block;
+                left: 0;
+                top: 0;
+                height: rem(5);
+                width: 100%;
+                background: var(--instagram-start);
+            }
+            //border-top: rem(5) solid var(--Instagram);
+        }
+
+        &--youtube {
+            border-top: rem(5) solid var(--Youtube);
+        }
+
+        &__grid {
+
+        }
+
+        &__platform {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: rem(20);
+            margin-top: rem(5);
+            margin-bottom: rem(28);
+        }
+    }
+
+    &__subtitles {
+        font-size: rem(14);
+        font-weight: 700;
+    }
+
+    &__icon {
+        &--facebook {
+
+        }
+
+        &--Twitter {
             
         }
 
@@ -40,15 +89,21 @@
             
         }
 
-        &--youtube {
+        &--YouTube {
             
         }
+    }
 
-        &__platform {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    &__username  {
+
+    }
+
+    &__count {
+
+    }
+
+    &__label {
+
     }
 
     &__username {
@@ -72,7 +127,7 @@
         }
 
         &--small {
-
+            font-size: rem(32);
         }
     }
 
