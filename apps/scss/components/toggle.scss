@@ -1,6 +1,8 @@
 @use '../util' as *;
 
  .toggle {
+    display: grid;
+    grid-template-columns: 1fr 3rem;
     border: none;
     margin: 0;
 
@@ -14,7 +16,7 @@
     input[type="radio"]{
         margin: rem(-2) 0 rem(-2) 0;
         opacity: 0;
-        width: rem(20);
+        width: rem(24);
         height: rem(24);
 
         &:focus .toggle__button {
@@ -28,8 +30,7 @@
         position: absolute;
         width: 100;
         top: 0;
-        background: linear-gradient(325deg, var(--toggle-bg-end) 0%,
-        var(--toggle-bg-start) 98.02%);
+        background: var(--toggle-bg);
         pointer-events: none;
     }
 
@@ -41,13 +42,18 @@
         width: rem(16);
         height: rem(16);
         border-radius: 50%;
-        background-color: var(--dark-bg);
+        background-color: var(--toggle-btn);
         transition: all 150ms ease-in-out;
     }
 
-    legend{
-        font-size: rem(14);
-        grid-column: 1 / 2;
+    label{
+        font-size: rem(34);
+        color: var(--toggle);
+
+        &[for="dark"]{
+            line-height: rem(34);
+            margin-right: rem(13);
+        }
     }
  }
 
