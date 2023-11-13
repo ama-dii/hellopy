@@ -1,16 +1,11 @@
 @use '../util' as *;
 
  .toggle {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: rem(4.8) rem(12);
     border: none;
     margin: 0;
 
     &__wrapper{
         position: relative;
-        grid-column: 2 / 3;
-        grid-row: 1 / 3;
         height: rem(24);
         border-radius: rem(12);
         overflow: hidden;
@@ -50,32 +45,12 @@
         transition: all 150ms ease-in-out;
     }
 
-    label{
+    legend{
         font-size: rem(14);
-        align-self: center;
-
-     &__[for="dark"]  {
         grid-column: 1 / 2;
-        justify-self: end;
-     }
-     &__[for="system"]  {
-        grid-column: 1 / 4;
-        grid-row: 2 / 3;
-        justify-self: center;
-     }
-     &__[for="light"]  {
-        grid-column: 3 / 4;
-     } 
     }
  }
 
- #light:checked (
-    right: 0;
-    left: 100%;
-    )
 
-    #system:checked .toggle__button (
-        left: 50%;
-        right: auto;
-        transform: translate(-50%)
-    )
+
+   
