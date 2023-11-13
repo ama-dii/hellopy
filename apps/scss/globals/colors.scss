@@ -42,5 +42,26 @@
         var(--toggle-bg-start) 98.02%);
     }
     --toggle-btn:var (--dark-bg);
+
+    body.light {
+        --background: var(--light-bg);
+        --text-color: var(--light-card);
+        --text-color2: var(--light-card);
+        --card-hover: var(--light-card--hover);
+        --toggle: var(--toggle-light);
+        --toggle-bg: var(--toggle-bg-light);
+        --toggle-btn: var(--toggle-btn-light);
+    }
+
+    body.dark {
+        --background: var(--dark-bg);
+        --text-color: var(--dark-card);
+        --text-color2: var(--dark-card);
+        --card-hover: varr(--drak-card--hover);
+        --toggle: var(--light-bg);
+        --toggle: var(--light-bg);
+        --toggle-bg: var(--toggle-bg-light);
+        --toggle-btn: var(--toggle-btn-light);
+    }
 }
 
